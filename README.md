@@ -30,20 +30,3 @@ npm run dev
 yarn dev
 
 
-## 📁 Project Structure
-
-```
-age-forward-website/
-├── app/                    # Next.js app directory
-│   ├── globals.css        # Global styles
-│   ├── layout.tsx         # Root layout component
-│   ├── loading.tsx        # Loading component
-│   └── page.tsx           # Homepage component
-├── components/            # Reusable UI components
-│   ├── ui/               # Base UI components (buttons, cards, etc.)
-│   └── theme-provider.tsx # Dark/light theme provider
-├── hooks/                 # Custom React hooks
-├── lib/                  # Utility functions
-├── public/               # Static assets
-├── styles/               # Additional stylesheets
-└── README.md            # Project documentation
