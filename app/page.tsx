@@ -105,10 +105,6 @@ const accessibilityFeatures = [
   "Single Level Living",
   "Elevator Access",
   "Accessible Kitchen",
-  "Emergency Alert System",
-  "Low Maintenance Exterior",
-  "Roll-in Shower",
-  "Accessible Parking",
 ]
 
 export default function HomePage() {
@@ -261,6 +257,156 @@ export default function HomePage() {
                             className="border-neutral-300 data-[state=checked]:bg-brand-600 data-[state=checked]:border-brand-600"
                           />
                           <label htmlFor={feature} className="text-sm font-medium text-neutral-700 cursor-pointer">
+                            {feature}
+                          </label>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </TabsContent>
+
+                <TabsContent value="rent">
+                  <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-8">
+                    <div className="md:col-span-2">
+                      <Input
+                        placeholder="City, neighborhood, postal code, or MLS®"
+                        className="h-14 text-base border-neutral-300 focus:border-brand-500 focus:ring-brand-500/20 rounded-xl"
+                      />
+                    </div>
+                    <Select>
+                      <SelectTrigger className="h-14 border-neutral-300 focus:border-brand-500 focus:ring-brand-500/20 rounded-xl">
+                        <SelectValue placeholder="Property Type" />
+                      </SelectTrigger>
+                      <SelectContent className="rounded-xl">
+                        <SelectItem value="any">Any Type</SelectItem>
+                        <SelectItem value="apartment">Apartment</SelectItem>
+                        <SelectItem value="condo">Condo</SelectItem>
+                        <SelectItem value="townhouse">Townhouse</SelectItem>
+                        <SelectItem value="bungalow">Bungalow</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <Select>
+                      <SelectTrigger className="h-14 border-neutral-300 focus:border-brand-500 focus:ring-brand-500/20 rounded-xl">
+                        <SelectValue placeholder="Monthly Rent" />
+                      </SelectTrigger>
+                      <SelectContent className="rounded-xl">
+                        <SelectItem value="any">Any Rent</SelectItem>
+                        <SelectItem value="0-1500">Under $1,500</SelectItem>
+                        <SelectItem value="1500-2500">$1,500 - $2,500</SelectItem>
+                        <SelectItem value="2500-3500">$2,500 - $3,500</SelectItem>
+                        <SelectItem value="3500+">$3,500+</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <Button className="h-14 bg-brand-600 hover:bg-brand-700 text-white font-medium shadow-sm rounded-xl">
+                      <Search className="mr-2 h-5 w-5" />
+                      Search Rentals
+                    </Button>
+                  </div>
+
+                  {/* Accessibility Filters */}
+                  <div className="border-t border-neutral-200 pt-8">
+                    <div className="flex items-center justify-between mb-6">
+                      <h3 className="text-lg font-semibold text-neutral-900 flex items-center">
+                        <div className="w-8 h-8 bg-brand-100 rounded-lg flex items-center justify-center mr-3">
+                          <Wheelchair className="h-4 w-4 text-brand-600" />
+                        </div>
+                        Accessibility Features
+                      </h3>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="border-neutral-300 text-neutral-700 hover:bg-neutral-50 rounded-lg bg-transparent"
+                      >
+                        <Filter className="mr-2 h-4 w-4" />
+                        Advanced Filters
+                      </Button>
+                    </div>
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                      {accessibilityFeatures.slice(0, 8).map((feature) => (
+                        <div
+                          key={feature}
+                          className="flex items-center space-x-3 p-3 rounded-lg hover:bg-neutral-50 transition-colors"
+                        >
+                          <Checkbox
+                            id={`rent-${feature}`}
+                            className="border-neutral-300 data-[state=checked]:bg-brand-600 data-[state=checked]:border-brand-600"
+                          />
+                          <label htmlFor={`rent-${feature}`} className="text-sm font-medium text-neutral-700 cursor-pointer">
+                            {feature}
+                          </label>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </TabsContent>
+
+                <TabsContent value="sold">
+                  <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-8">
+                    <div className="md:col-span-2">
+                      <Input
+                        placeholder="City, neighborhood, postal code, or MLS®"
+                        className="h-14 text-base border-neutral-300 focus:border-brand-500 focus:ring-brand-500/20 rounded-xl"
+                      />
+                    </div>
+                    <Select>
+                      <SelectTrigger className="h-14 border-neutral-300 focus:border-brand-500 focus:ring-brand-500/20 rounded-xl">
+                        <SelectValue placeholder="Property Type" />
+                      </SelectTrigger>
+                      <SelectContent className="rounded-xl">
+                        <SelectItem value="any">Any Type</SelectItem>
+                        <SelectItem value="bungalow">Bungalow</SelectItem>
+                        <SelectItem value="condo">Condo</SelectItem>
+                        <SelectItem value="townhouse">Townhouse</SelectItem>
+                        <SelectItem value="detached">Detached</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <Select>
+                      <SelectTrigger className="h-14 border-neutral-300 focus:border-brand-500 focus:ring-brand-500/20 rounded-xl">
+                        <SelectValue placeholder="Sold Date" />
+                      </SelectTrigger>
+                      <SelectContent className="rounded-xl">
+                        <SelectItem value="7days">Last 7 days</SelectItem>
+                        <SelectItem value="30days">Last 30 days</SelectItem>
+                        <SelectItem value="90days">Last 3 months</SelectItem>
+                        <SelectItem value="6months">Last 6 months</SelectItem>
+                        <SelectItem value="1year">Last year</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <Button className="h-14 bg-brand-600 hover:bg-brand-700 text-white font-medium shadow-sm rounded-xl">
+                      <Search className="mr-2 h-5 w-5" />
+                      Search Sold
+                    </Button>
+                  </div>
+
+                  {/* Accessibility Filters */}
+                  <div className="border-t border-neutral-200 pt-8">
+                    <div className="flex items-center justify-between mb-6">
+                      <h3 className="text-lg font-semibold text-neutral-900 flex items-center">
+                        <div className="w-8 h-8 bg-brand-100 rounded-lg flex items-center justify-center mr-3">
+                          <Wheelchair className="h-4 w-4 text-brand-600" />
+                        </div>
+                        Accessibility Features
+                      </h3>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="border-neutral-300 text-neutral-700 hover:bg-neutral-50 rounded-lg bg-transparent"
+                      >
+                        <Filter className="mr-2 h-4 w-4" />
+                        Advanced Filters
+                      </Button>
+                    </div>
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                      {accessibilityFeatures.slice(0, 8).map((feature) => (
+                        <div
+                          key={feature}
+                          className="flex items-center space-x-3 p-3 rounded-lg hover:bg-neutral-50 transition-colors"
+                        >
+                          <Checkbox
+                            id={`sold-${feature}`}
+                            className="border-neutral-300 data-[state=checked]:bg-brand-600 data-[state=checked]:border-brand-600"
+                          />
+                          <label htmlFor={`sold-${feature}`} className="text-sm font-medium text-neutral-700 cursor-pointer">
                             {feature}
                           </label>
                         </div>
