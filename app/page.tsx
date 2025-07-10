@@ -8,7 +8,6 @@ import {
   Bath,
   Square,
   ShipWheelIcon as Wheelchair,
-  Home,
   Phone,
   Mail,
   Star,
@@ -115,8 +114,14 @@ export default function HomePage() {
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <div className="bg-gradient-to-br from-brand-600 to-brand-700 p-2.5 rounded-lg shadow-sm">
-                <Home className="h-7 w-7 text-white" />
+              <div className="rounded-lg shadow-sm">
+                <Image
+                  src="/logo.png"
+                  alt="AGE FORWARD Logo"
+                  width={40}
+                  height={40}
+                  className="h-10 w-10 object-contain"
+                />
               </div>
               <div>
                 <span className="text-2xl font-bold text-neutral-900 tracking-tight">AGE FORWARD</span>
@@ -605,7 +610,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="text-center p-8 hover:shadow-xl transition-all duration-300 border-0 shadow-lg rounded-2xl bg-white">
               <div className="w-16 h-16 bg-gradient-to-br from-brand-500 to-brand-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-                <Home className="h-8 w-8 text-white" />
+                <Search className="h-8 w-8 text-white" />
               </div>
               <CardTitle className="text-xl mb-4 font-bold text-neutral-900">Buy Accessible</CardTitle>
               <CardDescription className="text-neutral-600 mb-6 leading-relaxed">
@@ -785,8 +790,14 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-5 gap-12">
             <div className="md:col-span-2">
               <div className="flex items-center space-x-4 mb-6">
-                <div className="bg-brand-600 p-3 rounded-xl">
-                  <Home className="h-7 w-7 text-white" />
+                <div className="bg-white p-3 rounded-xl">
+                  <Image
+                    src="/logo.png"
+                    alt="AGE FORWARD Logo"
+                    width={28}
+                    height={28}
+                    className="h-7 w-7 object-contain"
+                  />
                 </div>
                 <div>
                   <span className="text-2xl font-bold">AGE FORWARD</span>

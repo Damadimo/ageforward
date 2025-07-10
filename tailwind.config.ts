@@ -53,20 +53,20 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Custom real estate colors
+        // Custom real estate colors - based on logo colors
         brand: {
-          50: "#f0f9ff",
-          100: "#e0f2fe",
-          200: "#bae6fd",
-          300: "#7dd3fc",
-          400: "#38bdf8",
-          500: "#0ea5e9",
-          600: "#0284c7",
-          700: "#0369a1",
-          800: "#075985",
-          900: "#0c4a6e",
+          50: "#f7fcf0",
+          100: "#ecf7e0",
+          200: "#d9f0c4",
+          300: "#bce49c",
+          400: "#9ACD32",
+          500: "#8bb92d",
+          600: "#66BB44",
+          700: "#4d8f33",
+          800: "#336633",
+          900: "#2d5829",
         },
-        accent: {
+        error: {
           50: "#fef2f2",
           100: "#fee2e2",
           200: "#fecaca",
