@@ -137,6 +137,9 @@ export default function HomePage() {
               <Link href="#" className="text-neutral-700 hover:text-brand-600 font-medium transition-colors">
                 Sell
               </Link>
+              <Link href="/about" className="text-neutral-700 hover:text-brand-600 font-medium transition-colors">
+                About Us
+              </Link>
               <Link href="#" className="text-neutral-700 hover:text-brand-600 font-medium transition-colors">
                 Accessibility Guide
               </Link>
@@ -425,7 +428,87 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Statistics Section */}
+      <section className="py-20 bg-gradient-to-br from-neutral-50 to-brand-50/30 relative overflow-hidden">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl lg:text-5xl font-bold mb-4 tracking-tight text-neutral-900">
+                The Growing Need for <span className="text-brand-600">Accessible Housing</span>
+              </h2>
+              <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
+                Canada's aging population faces significant challenges in finding suitable, accessible housing options
+              </p>
+            </div>
 
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+              {/* Statistic 1 */}
+              <div className="text-center group">
+                <div className="bg-white rounded-3xl p-8 border border-neutral-200 hover:border-brand-300 transition-all duration-300 hover:shadow-xl shadow-lg">
+                  <div className="text-6xl lg:text-7xl font-bold text-brand-600 mb-4 group-hover:scale-105 transition-transform duration-300">
+                    6.2M
+                  </div>
+                  <div className="text-2xl font-semibold text-neutral-900 mb-3">
+                    Canadians with Disabilities
+                  </div>
+                  <div className="text-neutral-600 text-lg leading-relaxed">
+                    Nearly 1 in 5 Canadians live with a disability, with accessibility needs growing as our population ages
+                  </div>
+                </div>
+              </div>
+
+              {/* Statistic 2 */}
+              <div className="text-center group">
+                <div className="bg-white rounded-3xl p-8 border border-neutral-200 hover:border-emerald-300 transition-all duration-300 hover:shadow-xl shadow-lg">
+                  <div className="text-6xl lg:text-7xl font-bold text-emerald-600 mb-4 group-hover:scale-105 transition-transform duration-300">
+                    $15K
+                  </div>
+                  <div className="text-2xl font-semibold text-neutral-900 mb-3">
+                    Average Modification Cost
+                  </div>
+                  <div className="text-neutral-600 text-lg leading-relaxed">
+                    The typical cost to retrofit a home for accessibility - far less than assisted living facilities
+                  </div>
+                </div>
+              </div>
+
+              {/* Statistic 3 */}
+              <div className="text-center group">
+                <div className="bg-white rounded-3xl p-8 border border-neutral-200 hover:border-red-300 transition-all duration-300 hover:shadow-xl shadow-lg">
+                  <div className="text-6xl lg:text-7xl font-bold text-red-600 mb-4 group-hover:scale-105 transition-transform duration-300">
+                    28%
+                  </div>
+                  <div className="text-2xl font-semibold text-neutral-900 mb-3">
+                    Seniors Fall Annually
+                  </div>
+                  <div className="text-neutral-600 text-lg leading-relaxed">
+                    Over 1 in 4 seniors fall each year, highlighting the critical need for accessible, safe housing
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-16 text-center">
+              <div className="bg-white rounded-2xl p-8 border border-neutral-200 shadow-lg max-w-4xl mx-auto">
+                <h3 className="text-2xl font-bold text-neutral-900 mb-4">
+                  The Solution: Proactive Accessible Housing
+                </h3>
+                <p className="text-lg text-neutral-600 mb-6 leading-relaxed">
+                  By choosing accessible housing now, you can age in place comfortably, avoid costly emergency modifications, 
+                  and maintain your independence for years to come.
+                </p>
+                <Button 
+                  size="lg"
+                  className="bg-brand-600 hover:bg-brand-700 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  Find Your Accessible Home
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Featured Properties */}
       <section className="py-20 bg-neutral-50">
